@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous" />
+
+    <!-- Material by Google -->
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Calculadora</title>
+  </head>
+
+  <body>
+
+   <div class="col-lg-12 box">
+        <div class="row titulo">
+                <div class="col-lg-12 text-center" style="margin: 10px;">
+                        <h1  style="font-size: 25px;">Calculadora de créditos</h1>
+                      </div>
+        </div>  
+        <div class="row conteudo">
+            <div class="col-lg-12">
+                <div class="row">                       
+                    <div class="col-lg-1"></div>
+
+                    <div class="col-lg-4 cards">
+                        <div class="card col-lg-12 text-center cardTitulo">
+                            Informações do plano
+                        </div>
+                        <div class="card col-lg-12 cardConteudo">
+                            <div class="col-12" >
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label class="font-weight-bold">Data da contabilização:</label>
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="date" class="form-control" id="dateAccounting">
+                                        </div>              
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label class="font-weight-bold">Data da solicitação:</label>
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="date" class="form-control" id="dateSolicitation">
+                                        </div>              
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label class="font-weight-bold">Periodicidade:</label>
+                                    </div>
+                                    <div class="col-12">
+                                        <select class="form-control" id="period">
+                                            <option value="1" >Mensal</option>
+                                            <option value="3" >Trimestral</option>
+                                            <option value="6" >Semestral</option>
+                                            <option value="12" >Anual</option>
+                                            </select>
+                                        </div>              
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label class="font-weight-bold">Plano:</label>
+                                    </div>
+                                    <div class="col-12">
+                                        <select class="form-control" id="plan">
+                                            <option value="25.90" >Hospedagem Profissional 1</option>
+                                            <option value="38.90" >Hospedagem Profissional 2</option>
+                                            <option value="69.90" >Hospedagem Profissional 3</option>
+                                            <option value="8.90" >E-mail Profissional 1</option>
+                                            <option value="14.90" >E-mail Profissional 2</option>
+                                            <option value="Outros" >Outros</option>
+                                            </select>
+                                        </div>              
+                                </div>
+                                <div id="divPlanos" class="row ">
+                                    <div class="col-12">
+                                        <label class="font-weight-bold">Valor:</label>
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="text" class="form-control" id="otherValue">
+                                        </div>              
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+ 
+                    <div class="col-lg-4 cards">
+                        <div class="card col-lg-12 text-center cardTitulo">
+                            Valores do planos
+                        </div>
+                        <div class="card col-lg-12 cardConteudo">
+                            <table class="table">
+                                <thead class="thead-dark">                     
+                                <tr>
+                                    <th scope="col">Periodo</th>
+                                    <th scope="col">Sem desconto</th>
+                                    <th scope="col">Com desconto</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">Mensal</th>
+                                    <td id="mensalSemDesconto">0</td>
+                                    <td id="mensalComDesconto">0</td>
+                    
+                                </tr>
+                                <tr>
+                                    <th scope="row">Trimestral</th>
+                                    <td id="trimestralSemDesconto">0</td>
+                                    <td id="trimestralComDesconto">0</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Semestral</th>
+                                    <td id="semestralSemDesconto">0</td>
+                                    <td id="semestralComDesconto">0</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Anual</th>
+                                    <td id="anualSemDesconto">0</td>
+                                    <td id="anualcomDesconto">0</td>
+                                </tr>
+                                </tbody>
+                            </table> 
+                        </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    
+                    <div class="col-lg-1"></div>
+
+                    <div class="col-lg-4 cards">
+                        <div class="card col-lg-12 text-center cardTitulo">
+                            Dedução da multa 
+                        </div>
+                        <div class="card col-lg-12 cardConteudo">
+                            <table class="table">
+                                
+                                <tbody>
+                                <tr>
+                                    <th scope="row">Multa de atrazo</th>
+                                    <td id="multaDeAtrazo">0</td>
+                                    
+                        
+                                </tr>
+                                <tr>
+                                    <th scope="row">Valor com multa </th>
+                                    <td id="valorComMulta">0</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <th scope="row">Dedução da Multa</th>
+                                    <td id="deducaoDaMulta">0</td>
+                                    
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+
+                    <div class="col-lg-4 cards">
+                            <div class="card col-lg-12 text-center cardTitulo">
+                                    Resultado
+                            </div>
+                            <div class="card col-lg-12 cardConteudo">
+                                    <table class="table">
+                                            
+                                            <tbody>
+                                            <tr>
+                                                <th scope="row">Dias contratados</th>
+                                                <td id="DiasContratados">0</td> 
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Dias usados </th>
+                                                <td id="DiasUsados">0</td>                    
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Dias não usados</th>
+                                                <td id="diasNaoUsados">0</td>                    
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Valor pago</th>
+                                                <td id="valorPago">0</td>                    
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Valor usado</th>
+                                                <td id="valorUsado">0</td>                    
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Créditos</th>
+                                                <td id="Creditos">0</td>                    
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"></div>
+                </div>
+                
+            </div>
+            
+        </div>
+
+       
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                    
+                  <h5 class="modal-title" id="exampleModalLabel">Erro!</h5>
+                  
+                </div>
+                <div class="modal-body">                  
+                  <p id="errorText"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    
+    <!-- Material by Google -->
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
