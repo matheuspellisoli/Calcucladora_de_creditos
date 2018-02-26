@@ -111,7 +111,7 @@ function getResult(){
     fine = ((value * 0.03)).toFixed(2);
     $("#multaDeAtrazo").text(fine);
     valueFine = parseFloat(value)+ parseFloat(fine);
-    $("#valorComMulta").text(valueFine);
+    $("#valorComMulta").text(valueFine.toFixed(2));
     reduction = ((valueFine - value)*100)/103   
     $("#deducaoDaMulta").text(reduction.toFixed(2));
  }
