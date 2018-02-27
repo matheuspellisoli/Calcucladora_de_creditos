@@ -79,10 +79,10 @@ function  setResult(){
     $("#DiasUsados").text(input.difference);
     $("#diasNaoUsados").text(input.period - input.difference);        
     $("#valorPago").text(getPerci(input.period));
-    var valorUsado =  (((input.difference *100)/ input.period) * input.perci) /100
+    var valorUsado =  (((input.difference *100)/ input.period) * getPerci(input.period)) /100
     valorUsado =  valorUsado.toFixed(2)
     $("#valorUsado").text(valorUsado); 
-    var Creditos = input.perci - valorUsado;       
+    var Creditos = getPerci(input.period) - valorUsado;       
     $("#Creditos").text(Creditos.toFixed(2));
 }
 
