@@ -1,46 +1,158 @@
 body{
-    margin: 0px;
-    padding: 0px;
-    background-color: #d1d6d6;
-}
-.titulo{
-    border-bottom: 1px solid #008F8F;
-    background-color: #008080;
-    color: rgb(248, 248, 248);    
-   
-}
-
-.conteudo{
- background-color: #d1d6d6;
-}
-.card{
+    margin: 0;
+    padding: 0;
+    background: #ccc;
+  }
+  #sideBar{
+    position: fixed;
+    background: #1d1d1d;
+    width: 20%;
+    height: 100%;
+  }
+  #Boxtitulo{
+    width: 100%;
+    text-align: center;
+    margin-top: 5%;
+  }
+  #titulo{
+    color: #ef843c;
+    font-size:45px;
+    text-align: center;
     margin: auto;
-}
-.cards{
-    margin-top: 15px;
-}
-
-.cardTitulo{
-    min-height: 20px;
-    background-color: #008080;
-    color: rgb(248, 248, 248);
-    font-size: 20px;
-}
-
-.cardConteudo{
-    min-height: 180px;
-    
-}
-.box{
+    font-family: 'Merriweather', serif;
+  }
+  
+  .conteudo{
+    background: #ccc;
+    margin-left: 20%;
+    width: 80%;
+    min-height: 800px;
+    position: absolute;
+    margin: auto; 
     overflow-x: hidden;
-    overflow-y: auto;
-}
-#otherValue{
-    margin-bottom: 5px;
-}
-
-input[type="text"]:disabled {
-    background: #d1d6d6;
-    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .boxDrop{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
-}
+  }
+  
+  .barDrop{
+    width: 80%;
+    font-size:20px;
+    background: #1d1d1d;
+    height: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .textLabel{
+    color: #fff;
+    font-family: 'Merriweather', serif;
+    flex-direction: row;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 5px;  
+  }
+  
+  .icon{
+    color: #fff;
+    float: right;
+    margin-right: 20px;
+  }
+  
+  .conteudoDrop{
+    background: #fff;
+    margin: 2px;
+    width: 100%;
+    display: flex;  
+    flex-direction: row;
+  }
+  .columnDrop{
+    flex-grow: 1;
+   
+    flex-direction: column;
+  }
+  .columnDrop span{
+   width: 100%;
+  } 
+  
+  .row{
+    text-align: center;
+    margin: 2px;
+    background-color:  #fafafa;
+    font-size: 20px;
+    padding: 4px;
+  }
+  .row.title{
+    font-weight: bold; 
+  }
+  .input{
+    padding: 5%;
+    
+  }
+  
+  .form-control{
+    background: #fff;
+    width: 95%;
+    height: 10%;
+    font-size: 20px;
+    padding: 5px;
+    margin: 5% 0;
+    border-radius: 5px;
+  }
+  .label{
+    font-size: 20px;
+    color: #fff;
+    
+  }
+  
+  #otherValueDiv {
+    padding: 5%; 
+  }
+  
+  .error{
+    color: #cc0000;
+    font-size: 1em;
+  }
+  
+  .modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; 
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
