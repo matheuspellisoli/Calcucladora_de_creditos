@@ -156,3 +156,8 @@ body{
     text-decoration: none;
     cursor: pointer;
   }
+
+  selection{
+    width: 100%;
+    height: 40px;
+  }
