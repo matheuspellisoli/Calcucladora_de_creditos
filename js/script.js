@@ -62,6 +62,7 @@ function setPerci(value){
 
 
 function getPerci(period){
+
     if( period == 30){
        perci =  $("#mensalComDesconto").text()
     }else if(period == 90){
@@ -70,7 +71,7 @@ function getPerci(period){
         perci = $("#semestralComDesconto").text()
     }else if(period == 365){
         perci = $("#anualcomDesconto").text()
-    }
+    }   
     return perci;
 }
 
@@ -82,10 +83,10 @@ function  setResult(){
     $("#DiasUsados").text(input.difference);
     $("#diasNaoUsados").text(input.period - input.difference);        
     $("#valorPago").text(getPerci(input.period));
-    var valorUsado =  (((input.difference *100)/ input.period) * input.perci) /100
+    var valorUsado =  (((input.difference *100)/ input.period) * getPerci(input.perci)) /100
     valorUsado =  valorUsado.toFixed(2)
     $("#valorUsado").text(valorUsado); 
-    var Creditos = input.perci - valorUsado;       
+    var Creditos = getPerci(input.perci) - valorUsado;       
     $("#Creditos").text(Creditos.toFixed(2));
 }
 
