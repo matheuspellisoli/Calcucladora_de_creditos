@@ -152,7 +152,7 @@ function manage(){
     
     
 }
-
+/*
 $("#otherValue").keyup(function() {
     $(this).val(this.value.replace(/\D/, ''));
     var tecla = event.key;
@@ -166,6 +166,7 @@ $("#otherValue").keyup(function() {
         }  
     }
 });
+*/
 
 $("#otherValue").change(function() {
     
