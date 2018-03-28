@@ -152,21 +152,12 @@ function manage(){
     
     
 }
-/*
+
 $("#otherValue").keyup(function() {
-    $(this).val(this.value.replace(/\D/, ''));
-    var tecla = event.key;
-    if(tecla != "Enter"){
-        if(tecla != "Backspace"){
-            if(tecla >= 0 || tecla <= 9 && ','){        
-                }else{
-                    $('#errorText').text("digite apenas números no valor")
-                    $('#exampleModal').modal();
-                }  
-        }  
-    }
+    $(this).val(this.value.replace(",", ''));
+    $(this).val(this.value.replace(/[a-z]/, ''));    
 });
-*/
+
 
 $("#otherValue").change(function() {
     
