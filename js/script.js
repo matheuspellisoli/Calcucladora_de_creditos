@@ -48,16 +48,16 @@ function getValue() {
 function setPerci(value){
     valuePlan =parseFloat(value);
         $("#mensalSemDesconto").text(valuePlan);
-        $("#mensalComDesconto").text(valuePlan);
+        $("#mensalComDesconto").text((valuePlan * 0.6).toFixed(2));
 
         $("#trimestralSemDesconto").text((valuePlan * 3).toFixed(2));
-        $("#trimestralComDesconto").text(((valuePlan * 3)*0.97).toFixed(2));
+        $("#trimestralComDesconto").text(((valuePlan * 3)*0.55).toFixed(2));
 
         $("#semestralSemDesconto").text((valuePlan * 6).toFixed(2));
-        $("#semestralComDesconto").text(((valuePlan * 6)*0.94).toFixed(2));
+        $("#semestralComDesconto").text(((valuePlan * 6)*0.5).toFixed(2));
 
         $("#anualSemDesconto").text((valuePlan * 12).toFixed(2));
-        $("#anualcomDesconto").text(((valuePlan * 12)*0.88).toFixed(2)); 
+        $("#anualcomDesconto").text(((valuePlan * 12)*0.45).toFixed(2)); 
 }
 
 
