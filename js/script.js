@@ -48,7 +48,7 @@ function getValue() {
 function setPerci(value){
     valuePlan =parseFloat(value);
         $("#mensalSemDesconto").text(valuePlan);
-        $("#mensalComDesconto").text(valuePlan * 0.6);
+        $("#mensalComDesconto").text((valuePlan * 0.6).toFixed(2));
 
         $("#trimestralSemDesconto").text((valuePlan * 3).toFixed(2));
         $("#trimestralComDesconto").text(((valuePlan * 3)*0.55).toFixed(2));
