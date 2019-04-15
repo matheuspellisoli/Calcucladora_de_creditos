@@ -2,7 +2,6 @@ $("#dateAccounting").val(new Date().toISOString().slice(0, 10));
 $("#dateSolicitation").val(new Date().toISOString().slice(0, 10));
 
 function getValue() {
-
     var dateAccounting = $("#dateAccounting").val();
     var dateSolicitation = $("#dateSolicitation").val();
     var plan = $("#plan option:selected").text();
@@ -50,7 +49,6 @@ function getValue() {
     }
 
     return values;
-
 }
 
 function setPerci(value) {
@@ -96,7 +94,6 @@ function getPerci(period, plan) {
 }
 
 function setResult() {
-
     var input = getValue();
 
     $("#DiasContratados").text(input.period);
@@ -129,7 +126,6 @@ function getResult() {
     return values;
 }
 
-
 function setFine(value) {
 
     fine = ((value * 0.03)).toFixed(2);
@@ -139,7 +135,6 @@ function setFine(value) {
     reduction = ((valueFine - value) * 100) / 103
     $("#deducaoDaMulta").text(reduction.toFixed(2));
 }
-
 
 function dateValidade() {
     var dateAccounting = $("#dateAccounting").val();
@@ -170,8 +165,6 @@ function manage() {
     setPerci(input);
     setResult();
     setFine(getPerci(input.period, input.plan))
-
-
 }
 
 $("#otherValue").keyup(function () {
@@ -181,7 +174,6 @@ $("#otherValue").keyup(function () {
 
 
 $("#otherValue").change(function () {
-
     manage()
 });
 $("#plan").change(function () {
@@ -198,12 +190,7 @@ $("#dateSolicitation").focusout(function () {
 });
 $("#otherValueDiv").hide();
 
-
-
 manage()
-
-
-
 
 function debug() {
     console.log("Dados de Entrada: ");
