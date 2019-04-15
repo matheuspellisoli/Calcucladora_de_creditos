@@ -35,7 +35,7 @@
             </div>
 
 
-            <div >
+            <div>
                 <label class="label">Periodicidade:</label>
             </div>
             <div>
@@ -60,7 +60,9 @@
                     <option value="Outros">Outros</option>
                 </select>
             </div>
-            
+            <div>
+                <input type="checkbox" id="primeiroPagamento"><label style="color:rgb(202, 202, 202)">Primeiro pagamento.</label>
+            </div>
             <div id="otherValueDiv">
                 <div>
                     <label class="label">Valor:</label>
@@ -75,103 +77,103 @@
     <div class="conteudo" style="height: 100%; width: 80%; margin-left: 20%;">
 
 
-            <div class="boxDrop" style="margin:2% 0" >
-                <div class="barDrop" id="bar2" >
+        <div class="boxDrop" style="margin:2% 0">
+            <div class="barDrop" id="bar2">
 
-                    <div class="textLabel">
-                        Valores
-                    </div>
-                    
-                </div>
-                <div class="conteudoDrop" id="conteudoDrop-bar2" style="height: 100%; width: 80%;">
-                    <div class="columnDrop col-3">
-                        <div class="row title">Periodo</div>
-                        <div class="row">Mensal</div>
-                        <div class="row">Trimestral</div>
-                        <div class="row">Semestral</div>
-                        <div class="row">Anual</div>
-                    </div>
-                    <div class="columnDrop col-3">
-                        <div class="row title">Sem desconto</div>
-                        <div class="row" id="mensalSemDesconto">0</div>
-                        <div class="row" id="trimestralSemDesconto"> 0</div>
-                        <div class="row" id="semestralSemDesconto">0</div>
-                        <div class="row" id="anualSemDesconto">0</div>
-                    </div>
-                    <div class="columnDrop col-3">
-                        <div class="row title">Com desconto</div>
-                        <div class="row" id="mensalComDesconto">0</div>
-                        <div class="row" id="trimestralComDesconto">0</div>
-                        <div class="row" id="semestralComDesconto">0</div>
-                        <div class="row" id="anualcomDesconto">0</div>
-                    </div>
-                </div>  
-            </div>    
-            
-            
-            <div class="boxDrop" style="margin:2% 0" >
-                    <div class="barDrop" id="bar2" >
-    
-                        <div class="textLabel">
-                                Resultado
-                        </div>
-                        
-                    </div>
-                    <div class="conteudoDrop" id="conteudoDrop-bar2" style="height: 100%; width: 80%;">
-                        <div class="columnDrop col-3">
-                            <div class="row title">Dias contratados</div>
-                            <div class="row title">Dias usados </div>
-                            <div class="row title">Dias não usados</div>
-                            <div class="row title">Valor pago</div>
-                            <div class="row title">Valor usado</div>
-                            <div class="row title">Créditos</div>
-                        </div>
-                        <div class="columnDrop col-3">
-                            <div class="row" id="DiasContratados">0</div>
-                            <div class="row" id="DiasUsados">0</div>
-                            <div class="row" id="diasNaoUsados">0</div>
-                            <div class="row" id="valorPago">0</div>
-                            <div class="row" id="valorUsado">0</div>
-                            <div class="row" id="Creditos">0</div>
-                        </div>
-                    </div>  
+                <div class="textLabel">
+                    Valores
                 </div>
 
-                <div class="boxDrop" style="margin:2% 0" >
-                        <div class="barDrop" id="bar2" >
-        
-                            <div class="textLabel">
-                                    Dedução da multa
-                            </div>
-                            
-                        </div>
-                        <div class="conteudoDrop" id="conteudoDrop-bar2" style="height: 100%; width: 80%;">
-                                <div class="columnDrop col-3">
-                                        <div style="display: none" class="row title">Multa de atraso</div>
-                                        <div class="row title">Valor com multa</div>
-                                        <div class="row title">Dedução da Multa</div>
-                                    </div>
-                                    <div class="columnDrop col-3">
-                                        <div style="display: none" class="row" id="multaDeAtrazo">0</div>
-                                        <div class="row" id="valorComMulta"> 0</div>
-                                        <div class="row" id="deducaoDaMulta">0</div>
-                                    </div>
-                        </div>  
-                    </div>
+            </div>
+            <div class="conteudoDrop" id="conteudoDrop-bar2" style="height: 100%; width: 80%;">
+                <div class="columnDrop col-3">
+                    <div class="row title">Periodo</div>
+                    <div class="row">Mensal</div>
+                    <div class="row">Trimestral</div>
+                    <div class="row">Semestral</div>
+                    <div class="row">Anual</div>
+                </div>
+                <div class="columnDrop col-3">
+                    <div class="row title">Sem desconto</div>
+                    <div class="row" id="mensalSemDesconto">0</div>
+                    <div class="row" id="trimestralSemDesconto"> 0</div>
+                    <div class="row" id="semestralSemDesconto">0</div>
+                    <div class="row" id="anualSemDesconto">0</div>
+                </div>
+                <div class="columnDrop col-3">
+                    <div class="row title">Com desconto</div>
+                    <div class="row" id="mensalComDesconto">0</div>
+                    <div class="row" id="trimestralComDesconto">0</div>
+                    <div class="row" id="semestralComDesconto">0</div>
+                    <div class="row" id="anualcomDesconto">0</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="boxDrop" style="margin:2% 0">
+            <div class="barDrop" id="bar2">
+
+                <div class="textLabel">
+                    Resultado
+                </div>
+
+            </div>
+            <div class="conteudoDrop" id="conteudoDrop-bar2" style="height: 100%; width: 80%;">
+                <div class="columnDrop col-3">
+                    <div class="row title">Dias contratados</div>
+                    <div class="row title">Dias usados </div>
+                    <div class="row title">Dias não usados</div>
+                    <div class="row title">Valor pago</div>
+                    <div class="row title">Valor usado</div>
+                    <div class="row title">Créditos</div>
+                </div>
+                <div class="columnDrop col-3">
+                    <div class="row" id="DiasContratados">0</div>
+                    <div class="row" id="DiasUsados">0</div>
+                    <div class="row" id="diasNaoUsados">0</div>
+                    <div class="row" id="valorPago">0</div>
+                    <div class="row" id="valorUsado">0</div>
+                    <div class="row" id="Creditos">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="boxDrop" style="margin:2% 0">
+            <div class="barDrop" id="bar2">
+
+                <div class="textLabel">
+                    Dedução da multa
+                </div>
+
+            </div>
+            <div class="conteudoDrop" id="conteudoDrop-bar2" style="height: 100%; width: 80%;">
+                <div class="columnDrop col-3">
+                    <div style="display: none" class="row title">Multa de atraso</div>
+                    <div class="row title">Valor com multa</div>
+                    <div class="row title">Dedução da Multa</div>
+                </div>
+                <div class="columnDrop col-3">
+                    <div style="display: none" class="row" id="multaDeAtrazo">0</div>
+                    <div class="row" id="valorComMulta"> 0</div>
+                    <div class="row" id="deducaoDaMulta">0</div>
+                </div>
+            </div>
+        </div>
     </div>
 
-<div id="myModal" class="modal">
+    <div id="myModal" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-   
-   <div id="error" class="error"></div>
-  </div>
+        <!-- Modal content -->
+        <div class="modal-content">
 
-</div>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-        <script src="./js/script.js"></script>
+            <div id="error" class="error"></div>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
 </body>
 <!--
 <div class="icon">
